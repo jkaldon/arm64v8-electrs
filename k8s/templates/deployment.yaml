@@ -33,7 +33,7 @@ spec:
           args: ["/home/electrs/init.sh"]
           envFrom:
             - secretRef:
-                name: electrs-rpc-creds
+                name: bitcoind-rpc-creds
           {{- with .Values.initEnv }}
           env: {{- toYaml . | nindent 12 }}
           {{- end }}

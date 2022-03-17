@@ -9,6 +9,13 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.9.4-5"
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 2Gi
+    limits:
+      cpu: 2000m
+      memory: 3Gi
 
 #initEnv:
 #- name: NAME_1
@@ -60,10 +67,10 @@ podAnnotations: {}
 podSecurityContext:
   fsGroup: 1000
 
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
+securityContext:
+  capabilities:
+    drop:
+    - ALL
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
   # runAsUser: 1000

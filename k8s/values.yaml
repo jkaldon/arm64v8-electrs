@@ -11,11 +11,11 @@ image:
   tag: "0.9.4-5"
   resources:
     requests:
-      cpu: 1000m
-      memory: 2Gi
+      cpu: 200m
+      memory: 600Mi
     limits:
       cpu: 2000m
-      memory: 3Gi
+      memory: 2Gi
 
 #initEnv:
 #- name: NAME_1

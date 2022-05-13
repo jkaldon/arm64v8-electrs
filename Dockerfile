@@ -1,7 +1,7 @@
 FROM debian:buster-slim as build
 
 ARG ELECTRS_BASE_URL=https://github.com/romanz/electrs.git
-ARG ELECTRS_BRANCH=v0.9.4
+ARG ELECTRS_BRANCH=v0.9.7
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH=$PATH:/root/.cargo/bin
